@@ -1,120 +1,120 @@
-\section*{Vietnamese Depression Level Classification using Large Language Models}
+# Vietnamese Depression Level Classification using Large Language Models
 
-\subsection*{Project Overview}
+## Project Overview
 
-This project focuses on the task of \textbf{classifying depression severity levels}
-from \textbf{Vietnamese narrative texts} using a \textbf{Large Language Model (LLM)}.
-The system is designed to not only predict a depression level but also to
-\textbf{generate human-readable explanations} for its decisions.
+This project focuses on **classifying depression severity levels from Vietnamese narrative texts**
+using a **Large Language Model (LLM)**.
+The system is designed not only to predict a depression label but also to **generate
+human-readable explanations** for its predictions.
 
-The project is developed in the context of academic research and is suitable for
-graduation theses or exploratory studies in
-\textit{Natural Language Processing (NLP)} and \textit{Mental Health Informatics}.
+The project is intended for **academic research and educational purposes**, particularly
+in the fields of **Natural Language Processing (NLP)** and **mental health–related text analysis**.
 
 ---
 
-\subsection*{Task Definition}
+## Task Definition
 
 Given a Vietnamese free-form narrative text describing personal experiences,
-emotions, or life events, the model assigns exactly \textbf{one} depression level
+emotions, or life events, the model assigns **exactly one depression level**
 based on predefined guidelines.
 
-The task is formulated as an \textbf{instruction-following text generation problem},
-where the model learns to follow detailed classification instructions and output
-a single label.
+The task is formulated as an **instruction-following text generation problem**,
+where the model learns to follow detailed instructions and output a single label.
 
 ---
 
-\subsection*{Depression Levels}
+## Depression Levels
 
 The system classifies texts into four levels:
 
-\begin{itemize}
-    \item \textbf{1-Bình thường}: No or minimal depressive symptoms, stable functioning
-    \item \textbf{2-Nhẹ}: Mild emotional distress or anxiety with limited impact
-    \item \textbf{3-Vừa}: Moderate depression affecting daily life and mental stability
-    \item \textbf{4-Nặng}: Severe psychological distress, hopelessness, or emotional collapse
-\end{itemize}
+- **1-Bình thường**  
+  No or minimal depressive symptoms, stable emotional and functional state.
 
-These levels are defined through explicit instructions embedded in the prompt,
-ensuring consistent interpretation during both training and inference.
+- **2-Nhẹ**  
+  Mild emotional distress or anxiety with limited impact on daily life.
 
----
+- **3-Vừa**  
+  Moderate depression with noticeable effects on mental health and daily functioning.
 
-\subsection*{Methodology}
+- **4-Nặng**  
+  Severe psychological distress, hopelessness, or emotional collapse.
 
-The approach is based on the following key ideas:
-
-\begin{itemize}
-    \item Treat depression classification as an instruction-following task
-    \item Fine-tune a Vietnamese-capable LLM using parameter-efficient techniques
-    \item Preserve the original narrative style of the input text
-    \item Encourage the model to reason about emotional cues and severity indicators
-\end{itemize}
-
-The model learns to associate narrative patterns, emotional expressions, and
-life circumstances with corresponding depression levels.
+These definitions are explicitly encoded in the instruction prompt to ensure
+consistent interpretation during both training and inference.
 
 ---
 
-\subsection*{Explainable Prediction}
+## Methodology
 
-Beyond label prediction, the system is designed to produce
-\textbf{natural language explanations} describing why a particular label was chosen.
+The approach is based on the following principles:
+
+- Treat depression classification as an **instruction-following task**
+- Fine-tune a Vietnamese-capable LLM using **parameter-efficient adaptation**
+- Preserve the original narrative structure and emotional flow of the text
+- Encourage the model to reason over emotional cues and severity indicators
+
+Rather than relying on surface-level keywords, the model learns to associate
+narrative patterns, emotional expressions, and lived experiences with
+corresponding depression levels.
+
+---
+
+## Explainable Prediction
+
+In addition to label prediction, the system generates **natural language explanations**
+describing why a particular label was chosen.
 
 Explanations typically reference:
-\begin{itemize}
-    \item Emotional states expressed in the text
-    \item Repeated negative experiences or stressors
-    \item Indicators of psychological burden or resilience
-\end{itemize}
 
-This explainability component aims to improve transparency and interpretability,
-which are critical for mental health–related applications.
+- Emotional states expressed in the narrative
+- Repeated stressors or negative life events
+- Indicators of psychological burden or resilience
+
+This explainability component aims to improve **transparency and interpretability**,
+which are essential for mental health–related applications.
 
 ---
 
-\subsection*{Data Characteristics}
+## Data Characteristics
 
-The dataset consists of Vietnamese narrative texts with varying lengths,
-often containing long personal stories rather than short sentences.
-This reflects real-world scenarios such as counseling submissions or advice-seeking posts.
+The dataset consists of Vietnamese narrative texts with highly variable lengths,
+often containing long and detailed personal stories rather than short sentences.
 
 Special attention is given to:
-\begin{itemize}
-    \item Handling long and detailed narratives
-    \item Preserving contextual coherence
-    \item Addressing class imbalance across depression levels
-\end{itemize}
+
+- Handling long-form narratives
+- Preserving contextual coherence
+- Addressing class imbalance across depression levels
+
+These characteristics reflect real-world advice-seeking or counseling-style texts.
 
 ---
 
-\subsection*{Intended Use}
+## Intended Use
 
 This project is intended for:
-\begin{itemize}
-    \item Academic research
-    \item Educational demonstrations of LLM-based text classification
-    \item Exploratory analysis of explainable AI in mental health
-\end{itemize}
 
-\textbf{It is not intended for clinical diagnosis or medical decision-making.}
+- Academic research
+- Educational demonstrations of LLM-based text classification
+- Exploratory studies on explainable AI for mental health text analysis
 
----
-
-\subsection*{Ethical Considerations}
-
-Depression level predictions produced by this system do not constitute a medical diagnosis.
-All outputs should be interpreted with caution and used only for research or educational purposes.
+**This system is not intended for clinical diagnosis or medical decision-making.**
 
 ---
 
-\subsection*{Future Directions}
+## Ethical Considerations
+
+All predictions produced by this system should be interpreted with caution.
+The model does not replace professional mental health assessment and should be used
+only for research or educational purposes.
+
+---
+
+## Future Directions
 
 Potential extensions of this work include:
-\begin{itemize}
-    \item Chunk-based reasoning for very long texts
-    \item Improved explanation faithfulness
-    \item Multi-stage or hierarchical severity classification
-    \item Comparative studies with traditional machine learning models
-\end{itemize}
+
+- Chunk-based or hierarchical reasoning for very long texts
+- Improved faithfulness and diversity of explanations
+- Multi-stage depression severity modeling
+- Comparative analysis with traditional machine learning approaches
